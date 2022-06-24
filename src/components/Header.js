@@ -44,7 +44,7 @@ export const Header = () => {
           <Link to={"/"}>Home</Link>
         </Menu>
         <Menu>
-          <Link to={"/"}>Search</Link>
+          <Link to={"/search"}>Search</Link>
         </Menu>
       </MenuWrap>
     </SHeader>
