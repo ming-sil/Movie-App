@@ -6,7 +6,7 @@
 - [x] Router setup
 - [x] Create Components
 - [x] Helmet
-- [ ] Get API
+- [x] Get API
 - [ ] Use Effect
 - [ ] Try Catch
 - [ ] Header Event
