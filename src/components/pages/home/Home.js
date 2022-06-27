@@ -24,31 +24,37 @@ export const Home = () => {
   const [latest, setLatest] = useState();
   const [upComming, setUpComming] = useState();
   const [loading, setLoading] = useState(true);
+  // 들어가자마자 로딩화면이 보일것이므로 =>true
 
   useEffect(() => {
     const movieData = async () => {
       try {
+        // 현재상영중 영화
         const {
           data: { results: playingData },
           // =>비구조화 할당 이용시 변수명 변경할땐 변수명:변경할 명
         } = await movieApi.nowPlaying();
         setPlaying(playingData);
 
+        // 인기영화
         const {
           data: { results: ratedData },
         } = await movieApi.topRated();
         setRated(ratedData);
 
+        // // 최신영화
         // const {
         //   data: { results: latestData },
         // } = await movieApi.latest();
         // setLatest(latestData);
 
+        // 개봉예정영화
         const {
           data: { results: upCommingData },
         } = await movieApi.upComming();
         setUpComming(upCommingData);
 
+        // 읽어들이기 끝난 후 로딩화면 false로 바꿔주기
         setLoading(false);
       } catch (error) {
         console.log(error);
@@ -69,6 +75,7 @@ export const Home = () => {
       ) : (
         <>{playing && <MainBanner playData={playing[movieNum]} />}</>
       )}
+      {/* 로딩중이다 ?(참이면) 로딩화면불러오기 :(아니면) 현재상영영화&&(둘 다 true)메인배너 실행 */}
     </>
   );
 };

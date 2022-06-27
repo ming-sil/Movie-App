@@ -10,6 +10,7 @@
 - [x] Helmet
 - [x] Get API
 - [ ] Container
+- [ ] Responsive
 
 ## Main Page
 
