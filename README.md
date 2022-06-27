@@ -15,7 +15,7 @@
 
 - [x] Use Effect
 - [x] Try Catch
-- [ ] Loading
+- [x] Loading
 - [ ] Header Event
 - [ ] Slide
 
