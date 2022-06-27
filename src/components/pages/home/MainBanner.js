@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { mainStyle } from "../../../styles/globalStyle";
+import { imgUrl } from "../../constant/constant";
 
 const Banner = styled.section`
   height: 80vh;
@@ -30,7 +31,7 @@ export const MainBanner = ({ playData }) => {
   return (
     <Banner
       style={{
-        background: `url(https://image.tmdb.org/t/p/original/${playData.backdrop_path}) no-repeat center / cover`,
+        background: `url(${imgUrl}${playData.backdrop_path}) no-repeat center / cover`,
       }}
     >
       <Title>{playData.title}</Title>

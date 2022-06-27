@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { movieApi } from "../../../api";
+import { movieNum } from "../../constant/constant";
 import { Loading } from "../../Loading";
 import { MainBanner } from "./MainBanner";
 console.log(movieApi.nowPlaying());
@@ -66,7 +67,7 @@ export const Home = () => {
       {loading ? (
         <Loading />
       ) : (
-        <>{playing && <MainBanner playData={playing[0]} />}</>
+        <>{playing && <MainBanner playData={playing[movieNum]} />}</>
       )}
     </>
   );
