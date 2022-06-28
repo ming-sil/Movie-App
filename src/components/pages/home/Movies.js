@@ -27,9 +27,9 @@ export const Movies = ({ movieData, movieTitle }) => {
   return (
     <Container>
       <Title>{movieTitle}</Title>
-      <Swiper slidesPerView={5} spaceBetween={20}>
+      <Swiper slidesPerView={5.2} spaceBetween={20}>
         {movieData.map((play) => (
-          <SwiperSlide>
+          <SwiperSlide key={play.id}>
             <Link to={"#"}>
               <MovieImg
                 style={{

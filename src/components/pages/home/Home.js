@@ -68,7 +68,7 @@ export const Home = () => {
 
   console.log("현재상영영화:", playing);
   console.log("인기영화:", rated);
-  // // console.log("최신영화:", latest);
+  // console.log("최신영화:", latest);
   console.log("개봉예정영화:", upComming);
 
   return (
