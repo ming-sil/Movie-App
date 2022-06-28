@@ -12,6 +12,13 @@ const Banner = styled.section`
   }
 `;
 
+// const Gradient = styled.div`
+//   width: 100%;
+//   height: 80vh;
+//   background: rgb(0, 0, 0);
+//   background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+// `;
+
 const Title = styled.div`
   max-width: 650px;
   /* width: 100%; */
@@ -48,8 +55,10 @@ export const MainBanner = ({ playData }) => {
         background: `url(${imgUrl}${playData.backdrop_path}) no-repeat center / cover`,
       }}
     >
+      {/* <Gradient> */}
       <Title>{playData.title}</Title>
       <Desc>{playData.overview.slice(0, 130) + "..."}</Desc>
+      {/* </Gradient> */}
     </Banner>
   );
 };

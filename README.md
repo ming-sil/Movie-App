@@ -9,7 +9,7 @@
 - [x] Create Components
 - [x] Helmet
 - [x] Get API
-- [ ] Container
+- [x] Container
 - [ ] Responsive
 
 ## Main Page
@@ -18,7 +18,7 @@
 - [x] Try Catch
 - [x] Loading
 - [ ] Header Event
-- [ ] Slide
+- [x] Slide
 
 ## Detail Page
 

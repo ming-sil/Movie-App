@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
+import "swiper/css";
 import { movieApi } from "../../../api";
 import { movieNum } from "../../constant/constant";
 import { Loading } from "../../Loading";
 import { MainBanner } from "./MainBanner";
+import { Container } from "../../Container";
+import { Movies } from "./Movies";
 console.log(movieApi.nowPlaying());
 
 export const Home = () => {
@@ -64,16 +67,27 @@ export const Home = () => {
   }, []);
 
   console.log("현재상영영화:", playing);
-  // console.log("인기영화:", rated);
+  console.log("인기영화:", rated);
   // // console.log("최신영화:", latest);
-  // console.log("개봉예정영화:", upComming);
+  console.log("개봉예정영화:", upComming);
 
   return (
     <>
       {loading ? (
         <Loading />
       ) : (
-        <>{playing && <MainBanner playData={playing[movieNum]} />}</>
+        <>
+          {playing && (
+            <>
+              <MainBanner playData={playing[movieNum]} />
+              <Container>
+                <Movies movieData={playing} movieTitle="현재 상영 영화" />
+                <Movies movieData={rated} movieTitle="인기 영화" />
+                <Movies movieData={upComming} movieTitle="개봉 예정 영화" />
+              </Container>
+            </>
+          )}
+        </>
       )}
       {/* 로딩중이다 ?(참이면) 로딩화면불러오기 :(아니면) 현재상영영화&&(둘 다 true)메인배너 실행 */}
     </>
