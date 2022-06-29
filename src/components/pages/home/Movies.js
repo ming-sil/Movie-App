@@ -58,7 +58,7 @@ export const Movies = ({ movieData, movieTitle }) => {
                   background: `url(${
                     play.backdrop_path
                       ? `${imgUrl}${play.backdrop_path}`
-                      : "http://www.ewallpapers.eu/sites/default/files/810664284.jpg"
+                      : "https://i.pinimg.com/564x/74/cc/8a/74cc8a346b601afc543014d29c6e3aa0.jpg"
                   }) no-repeat center / cover`,
                 }}
               />

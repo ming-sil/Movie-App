@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { mainStyle } from "../styles/globalStyle";
@@ -13,9 +14,11 @@ const SHeader = styled.div`
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 99;
+  transition: 0.3s;
+  background-color: ${(props) => props.bgColor};
   @media screen and (max-width: 500px) {
     padding: ${mainStyle.moPadding};
-    z-index: 99;
   }
 `;
 const Logo = styled.h3`
@@ -43,8 +46,21 @@ const Menu = styled.li`
 `;
 
 export const Header = () => {
+  const [bg, setBg] = useState("");
+
+  const handleScroll = () => {
+    const sct = window.pageYOffset;
+    if (300 < sct) {
+      setBg("#1d1d1d");
+    } else {
+      setBg("transparent");
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
   return (
-    <SHeader>
+    <SHeader bgColor={bg}>
       <Logo>
         <Link to={"/"}>Movie App</Link>
       </Logo>
