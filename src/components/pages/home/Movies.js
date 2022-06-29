@@ -52,7 +52,7 @@ export const Movies = ({ movieData, movieTitle }) => {
       >
         {movieData.map((play) => (
           <SwiperSlide key={play.id}>
-            <Link to={"#"}>
+            <Link to={`/detail/${play.id}`}>
               <MovieImg
                 style={{
                   background: `url(${imgUrl}${play.backdrop_path}) no-repeat center / cover`,
