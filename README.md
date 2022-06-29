@@ -1,8 +1,8 @@
 # Movie App
 
-# Todo
+## Todo
 
-## Global
+### Global
 
 - [x] Package install
 - [x] Router setup
@@ -10,25 +10,25 @@
 - [x] Helmet
 - [x] Get API
 - [x] Container
-- [ ] Header Responsive
-- [ ] Main Container Responsive
+- [x] Header Responsive
+- [x] Main Container Responsive
 
-## Main Page
+### Main Page
 
 - [x] Use Effect
 - [x] Try Catch
 - [x] Loading
 - [x] Slide
 - [ ] Slide Link
-- [ ] Slide Navigation
+- [x] Slide Navigation
 - [ ] Header Event
 - [ ] 404 Image
 
-## Detail Page
+### Detail Page
 
 - [ ] Video
 - [ ] Link
 
-## Search Page
+### Search Page
 
 - [ ] Css Grid

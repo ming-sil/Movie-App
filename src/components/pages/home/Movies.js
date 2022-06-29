@@ -1,7 +1,11 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper";
 import "swiper/css";
+import "swiper/css/navigation";
+
 import { imgUrl } from "../../constant/constant";
 
 const Container = styled.div`
@@ -24,10 +28,28 @@ const MovieTitle = styled.div`
 `;
 
 export const Movies = ({ movieData, movieTitle }) => {
+  const params = {
+    breakpoints: {
+      320: {
+        slidesPerView: 2.2,
+        spaceBetween: 10,
+      },
+      640: {
+        slidesPerView: 5.2,
+        spaceBetween: 20,
+      },
+    },
+  };
+
   return (
     <Container>
       <Title>{movieTitle}</Title>
-      <Swiper slidesPerView={5.2} spaceBetween={20}>
+      <Swiper
+        modules={[Navigation]}
+        navigation
+        {...params}
+        // spread operator(분산연산자)
+      >
         {movieData.map((play) => (
           <SwiperSlide key={play.id}>
             <Link to={"#"}>
