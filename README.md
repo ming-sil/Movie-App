@@ -27,7 +27,9 @@
 ### Detail Page
 
 - [ ] Video
-- [ ] Link
+- [x] Link
+- [ ] Scroll error
+- [ ] Responsive
 
 ### Search Page
 
