@@ -10,16 +10,29 @@ const Wrap = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 100px;
+  @media screen and (max-width: 500px) {
+    display: block;
+  }
 `;
 
 const Poster = styled.div`
   width: 48%;
   height: 80vh;
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    height: 70vh;
+  }
 `;
 
 const DescWrap = styled.div`
   width: 48%;
   margin: 40px 0;
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const Title = styled.h1`
@@ -27,9 +40,16 @@ const Title = styled.h1`
   font-weight: 700;
   margin-bottom: 10px;
   span {
-    font-weight: 300;
+    font-weight: 700;
     font-size: 18px;
     margin-left: 10px;
+    @media screen and (max-width: 500px) {
+      display: block;
+      margin-top: 5px;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    text-align: center;
   }
 `;
 
@@ -37,6 +57,9 @@ const TagLine = styled.h6`
   font-size: 20px;
   font-weight: 300;
   margin-bottom: 20px;
+  @media screen and (max-width: 500px) {
+    text-align: center;
+  }
 `;
 
 const Info = styled.ul`
@@ -44,6 +67,12 @@ const Info = styled.ul`
   font-size: 18px;
   li {
     line-height: 1.5rem;
+    @media screen and (max-width: 500px) {
+      margin: 0 10px;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    display: flex;
   }
 `;
 
