@@ -26,7 +26,7 @@
 
 ### Detail Page
 
-- [ ] Video
+- [x] Video
 - [x] Link
 - [x] Scroll error
 - [x] Responsive
