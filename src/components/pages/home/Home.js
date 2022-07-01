@@ -7,6 +7,7 @@ import { MainBanner } from "./MainBanner";
 import { Container } from "../../Container";
 import { Movies } from "./Movies";
 import { ScrollTop } from "../../../ScrollTop";
+import { PageTitle } from "../../PageTitle";
 console.log(movieApi.nowPlaying());
 
 export const Home = () => {
@@ -74,6 +75,7 @@ export const Home = () => {
 
   return (
     <>
+      <PageTitle title={"Home"} />
       <ScrollTop />
       {loading ? (
         <Loading />
