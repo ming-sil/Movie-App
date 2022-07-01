@@ -6,6 +6,7 @@ import { Loading } from "../../Loading";
 import { MainBanner } from "./MainBanner";
 import { Container } from "../../Container";
 import { Movies } from "./Movies";
+import { ScrollTop } from "../../../ScrollTop";
 console.log(movieApi.nowPlaying());
 
 export const Home = () => {
@@ -73,6 +74,7 @@ export const Home = () => {
 
   return (
     <>
+      <ScrollTop />
       {loading ? (
         <Loading />
       ) : (
