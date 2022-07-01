@@ -86,6 +86,18 @@ const Overview = styled.p`
   line-height: 1.5rem;
 `;
 
+const Button = styled.div`
+  width: 200px;
+  height: 50px;
+  border: 1px solid white;
+  margin-top: 30px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+`;
+
 export const MovieDetail = ({ movieData }) => {
   return (
     <Wrap>
@@ -113,6 +125,7 @@ export const MovieDetail = ({ movieData }) => {
           <li>런타임: {movieData.runtime} 분</li>
         </Info>
         <Overview>{movieData.overview}</Overview>
+        <Button>예고편 보러가기</Button>
       </DescWrap>
     </Wrap>
   );
