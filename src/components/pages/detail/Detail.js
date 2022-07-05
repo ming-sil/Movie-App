@@ -1,22 +1,11 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import styled from "styled-components";
 import { movieApi } from "../../../api";
 import { ScrollTop } from "../../../ScrollTop";
 import { Container } from "../../Container";
 import { Loading } from "../../Loading";
 import { PageTitle } from "../../PageTitle";
 import { MovieDetail } from "./MovieDetail";
-
-const Iframe = styled.iframe`
-  width: 100%;
-  height: 700px;
-  margin-top: 150px;
-  @media screen and (max-width: 500px) {
-    height: 60vh;
-    margin-top: 100px;
-  }
-`;
 
 export const Detail = () => {
   const [movieData, setMovieData] = useState();
@@ -51,13 +40,9 @@ export const Detail = () => {
         <Loading />
       ) : (
         <Container>
-          {movieData && <MovieDetail movieData={movieData} />}
-          {videoData ? (
-            <Iframe
-              src={`https://www.youtube.com/embed/${videoData}`}
-              allowfullscreen
-            ></Iframe>
-          ) : null}
+          {movieData && (
+            <MovieDetail movieData={movieData} videoData={videoData} />
+          )}
         </Container>
       )}
     </>
