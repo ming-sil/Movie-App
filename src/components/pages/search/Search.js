@@ -78,7 +78,7 @@ export const Search = () => {
       if (results.length <= 0) {
         setError("result", { message: "없는 영화입니다." });
         // =>setError("에러이름",{message:"값"})
-        // =>useForm에 있는 속성으로 에러
+        // =>useForm에 있는 속성으로 하나 이상의 오류를 수동으로 설정할 수 있음.
       } else {
         setSearchTerm(results);
       }
