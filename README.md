@@ -33,4 +33,4 @@
 
 ### Search Page
 
-- [ ] Css Grid
+- [x] Css Grid
