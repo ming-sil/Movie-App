@@ -118,17 +118,28 @@ const Iframe = styled.iframe`
 
 export const MovieDetail = ({ movieData, videoData }) => {
   const [height, setHeight] = useState();
-
+ 
+  const trailerPosition = document.querySelector(".trailerPosition");
   const handleScroll = () => {
-    console.log(height.offsetTop);
+    // console.log(height.offsetTop);
+
+
 
     // window.scrollTo({
     //   top: 850,
     //   left: 0,
     //   behavior: "smooth",
     // });
-  };
 
+    const trailerPosition = document.querySelector(".trailerPosition");
+    window.scrollTo({
+      top: trailerPosition.offsetTop,
+      left: 0,
+      behavior: "smooth",
+    });
+
+  };
+  
   return (
     <>
       <Wrap>
@@ -162,7 +173,7 @@ export const MovieDetail = ({ movieData, videoData }) => {
         </DescWrap>
       </Wrap>
       {videoData ? (
-        <Iframe
+        <Iframe className="trailerPosition"
           src={`https://www.youtube.com/embed/${videoData}`}
           allowfullscreen
           scroll={height}
